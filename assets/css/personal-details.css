@@ -1,7 +1,9 @@
-
 .personal-info {
     display: flex;
+    width: 100vw;
     height: 100vh;
+    transition: all 0.7s ease-in-out;
+    box-sizing: border-box;
 }
 
 .name {
@@ -16,6 +18,7 @@
     flex: 1;
     height: 100%;
     position: relative;
+    color: #2e2e2e;
 }
 
 .initials,
@@ -23,6 +26,27 @@
     margin: 0;
     padding: 0;
     font-weight: 100;
+    position: relative;
+    opacity: 0;
+    transition: all 0.7s ease-in-out;
+}
+
+.initials {
+    top: -5%;
+}
+
+.full-name {
+    bottom: -5%;
+}
+
+.full-name--animate {
+    bottom: 0;
+    opacity: 1;
+}
+
+.initials--animate {
+    top: 0;
+    opacity: 1;
 }
 
 .initials {
@@ -67,6 +91,18 @@
     font-weight: 300;
 }
 
+.about__title,
+.about__description {
+    opacity: 0;
+    transition: all 0.7s ease-in-out;
+}
+
+.about__title--animate,
+.about__description--animate {
+    opacity: 1;
+}
+
+
 .contact {
     width: 50%;
 }
@@ -89,23 +125,26 @@
 
 .contact__icon {
     width: 1.25em;
+    height: 1.25em;
     margin-right: 0.5em;
     background-color: #fff;
     border-radius: 50%;
     padding: 0.2em;
     box-sizing: content-box;
+    position: relative;
+    top: 0.1em;
 }
 
 @media screen and (max-width: 1024px) {
     .initials {
         font-size: 12vw;
-    }    
+    }
 }
 
 @media screen and (max-width: 768px) {
     .initials {
         font-size: 14vw;
-    }    
+    }
 }
 
 @media screen and (max-width: 412px) {

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
@@ -18,8 +18,8 @@
             <div class="info-container">
                 <section class="info">
                     <article class="about">
-                        <h3>Frontend Developer</h3>
-                        <p>
+                        <h3 class="about__title">Frontend Developer</h3>
+                        <p class="about__description">
                             I'm a frontend developer who loves building clean, responsive
                             websites that are easy to use and nice to look at. I work mainly
                             with HTML, CSS, JavaScript, and their frameworks. I enjoy turning designs into
@@ -27,24 +27,28 @@
                         </p>
                     </article>
                     <article class="contact">
-                        <h3>Contact</h3>
+                        <h3 class="contact__title">Contact</h3>
                         <ul class="contact__list">
                             <li class="contact__item">
-                                <img class="contact__icon" src="./assets/img/google.png" />
+                                <i class="contact__icon google"></i>
                                 <a href="mailto:stanislav.alexandru@gmail.com" target="_blank">
                                     stanislav.alexandru@gmail.com
                                 </a>
                             </li>
                             <li class="contact__item">
-                                <img class="contact__icon" src="./assets/img/github.png">
+                                <i class="contact__icon github"></i>
                                 <a href="https://github.com/AlexStanislav/" target="_blank">GitHub</a>
                             </li>
                             <li class="contact__item">
-                                <img class="contact__icon" src="./assets/img/linkedin.png">
+                                <i class="contact__icon linkedin"></i>
                                 <a href="https://www.linkedin.com/in/alexandru-stanislav-5b9a5b365?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BIPyhPZnPQjm%2B83EgDtRNqw%3D%3D"
                                     target="_blank">
                                     LinkedIn
                                 </a>
+                            </li>
+                            <li class="contact__item">
+                                <i class="contact__icon codepen"></i>
+                                <a href="https://codepen.io/Alexandru-Stanislav" target="_blank">CodePen</a>
                             </li>
                         </ul>
                     </article>
@@ -52,7 +56,9 @@
             </div>
         </section>
         <section class="projects">
-            <h1>Some examples of my work</h1>
+            <h1 class="projects__title">
+                <span class="title__light">Some examples of my work</span>
+            </h1>
             <projects-list id="projects">
                 <template>
                     <article class="project">
@@ -61,7 +67,7 @@
                             <h3 class="project__title" data-key="title"></h3>
                             <p class="project__description" data-key="description"></p>
                             <p class="project__links">
-                                <a class="project__link"data-key="live_link" target="_blank">View Live</a>
+                                <a class="project__link" data-key="live_link" target="_blank">View Live</a>
                                 <a class="project__link" data-key="source_link" target="_blank">View Source</a>
                             </p>
                         </div>
@@ -70,7 +76,7 @@
             </projects-list>
         </section>
     </main>
-    <script src="./assets/main.js"></script>
+    <script src="./assets/js/main.js" type="module"></script>
 </body>
 
 </html>
